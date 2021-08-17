@@ -1,0 +1,2 @@
+rootProject.name = "HanRiverretrofit"
+include ':app'
