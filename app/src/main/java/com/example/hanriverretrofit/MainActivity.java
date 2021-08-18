@@ -2,8 +2,12 @@ package com.example.hanriverretrofit;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+
+import com.example.hanriverretrofit.databinding.ActivityMainBinding;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -12,11 +16,13 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-
+    ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding=ActivityMainBinding.inflate(getLayoutInflater());
+        View view=binding.getRoot();
+        setContentView(view);
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl("https://api.hangang.msub.kr")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -27,10 +33,11 @@ public class MainActivity extends AppCompatActivity {
         userCall.enqueue(new Callback<Apidata>() {
             @Override
             public void onResponse(Call<Apidata> call, Response<Apidata> response) {
-                Apidata user = response.body();
-                Log.d("asdf",user.temp+"");
+                Apidata temp = response.body();
+                binding.number.setText(temp.temp+"ºC");
 
-
+                int ran = (int) (Math.random() * 29);
+                binding.text.setText(R.string.a + ran);
 
             }
 
