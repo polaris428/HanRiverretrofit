@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Apidata> call, Response<Apidata> response) {
                 Apidata temp = response.body();
-                binding.number.setText(temp.temp+"ºC");
-                binding.timeset.setText(temp.time+"에 측정됨");
+                binding.waterTemperatureTextView.setText(temp.temp+"ºC");
+                binding.measurementTimeTextView.setText(temp.time+"에 측정됨");
                 int ran = (int) (Math.random() * 29);
-                binding.text.setText(R.string.a + ran);
+                binding.wiseSayingTextView.setText(R.string.a + ran);
 
             }
 
