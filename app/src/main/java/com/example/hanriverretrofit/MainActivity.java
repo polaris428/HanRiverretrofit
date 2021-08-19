@@ -8,6 +8,12 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.hanriverretrofit.databinding.ActivityMainBinding;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -23,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
         binding=ActivityMainBinding.inflate(getLayoutInflater());
         View view=binding.getRoot();
         setContentView(view);
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl("https://api.hangang.msub.kr")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -44,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<Apidata> call, Throwable t) {
                 t.printStackTrace();
-                Log.d("asdf",t+"");
+
             }
         });
 
