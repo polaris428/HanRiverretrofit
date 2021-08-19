@@ -1,4 +1,4 @@
-package com.example.hanriverretrofit;
+package com.hanriver.hanriverretrofit;
 
 public class Apidata {
 

@@ -16,7 +16,7 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9209966510989078~6341438371"/>
-        <activity android:name=".SplashActivity">
+        <activity android:name="com.hanriver.hanriverretrofit.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +24,7 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.hanriver.hanriverretrofit.MainActivity">
 
         </activity>
     </application>

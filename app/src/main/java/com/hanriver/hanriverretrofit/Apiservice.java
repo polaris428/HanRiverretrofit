@@ -1,4 +1,4 @@
-package com.example.hanriverretrofit;
+package com.hanriver.hanriverretrofit;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

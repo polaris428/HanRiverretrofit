@@ -1,15 +1,15 @@
-package com.example.hanriverretrofit;
+package com.hanriver.hanriverretrofit;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
+
+import com.example.hanriverretrofit.R;
 
 public class SplashActivity extends AppCompatActivity {
 

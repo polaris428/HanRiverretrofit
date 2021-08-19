@@ -1,19 +1,15 @@
-package com.example.hanriverretrofit;
+package com.hanriver.hanriverretrofit;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
+import com.example.hanriverretrofit.R;
 import com.example.hanriverretrofit.databinding.ActivityMainBinding;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import retrofit2.Call;
 import retrofit2.Callback;
